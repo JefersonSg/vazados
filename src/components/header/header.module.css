@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    border-radius: 6px;
+    padding-top: 20px;
+}
+
+.do {
+position: absolute;
+top: 45px;
+}
+.header h1 {
+    color: #F6E11F;
+    font-size: 24px;
+    font-weight: 700;
+}

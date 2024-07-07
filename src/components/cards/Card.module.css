@@ -1,0 +1,22 @@
+.card_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto_modelo {
+    margin-top: 8px;
+}
+.nome,
+.texto {
+    font-size:16px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.nome {
+    color: #D49C61;
+    padding-bottom: 8px;
+}
