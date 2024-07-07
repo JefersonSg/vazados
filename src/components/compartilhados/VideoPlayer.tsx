@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './video.module.css';
 
 const VideoPlayer = ({
   src,
@@ -19,6 +20,7 @@ const VideoPlayer = ({
 }) => {
   return (
     <video
+      className={styles.VideoPlayer}
       width={width}
       height={height}
       controls={controls}

@@ -1,0 +1,34 @@
+.image_background {
+    position: relative;
+    width: max-content;
+    border: 1px solid white;
+}
+
+.fundo {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+.frente {
+    position: relative;
+    z-index: 100;
+}
+.brilho {
+    left: 40%;
+    top: 40px;
+    transform: translate(-50%,0);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    z-index: 2;
+    filter: blur(50px);
+}
+
+.image_background:hover .fundo {
+    transition: all .3s;
+    filter: sepia(100%);
+    filter: blur(5px);
+}
