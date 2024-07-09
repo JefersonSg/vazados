@@ -1,0 +1,41 @@
+.content_payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.content_payment h2 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #f6e11f;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.time_count {
+    font-weight: 700;
+    font-size: 64px;
+    color: white;
+    width: 300px;
+    text-align: center;
+}
+
+.price p{
+    color: white;
+}
+
+.price p:first-child {
+    font-size: 13px;
+}
+.price p:first-child span{
+    font-size: 34px;
+    font-weight: 700;
+    text-decoration: line-through;
+    color: #FE3707;
+}
+
+.price p:last-child {
+    font-size: 16px;
+}

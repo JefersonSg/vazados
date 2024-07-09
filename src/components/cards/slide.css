@@ -1,37 +1,21 @@
 .mySwiper {
-    width: 80%;
-    max-width: 235px;
+    width: 270px;
+    max-width: 400px;
+    height: 80vh;
+    max-height: 350px;
     margin: 0 auto;
 }
 
 .swiper-slide {
     height: 100%;
     width: 100%;
-    min-height: 210px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
-.swiper-slide-prev ,
-.swiper-slide-next {
-    opacity: 0.4;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide-prev video,
-.swiper-slide-next video{
-    align-self: center;
-    opacity: 0.4;
-    width: 50px !important;
-    height: 92px !important;
-}
-
-
 
 .swiper-slide video{
-    max-width: 160px;
     left: 50%;
     transform: translate(-50%,0);
 }
@@ -40,8 +24,8 @@
 
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev {
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
   border-radius: 50px;
   background-color: white;
   opacity: 1;
@@ -86,4 +70,5 @@
 .mySwiper .swiper-button-prev.swiper-button-disabled {
   pointer-events: visible !important;
   opacity: 0.35;
+  display: none;
 }

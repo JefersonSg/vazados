@@ -17,7 +17,7 @@ const Header = () => {
       <Image
         className={styles.logo}
         alt="Imagem da logo"
-        src={'/header/logo.jpg'}
+        src={'/header/logo.png'}
         width={200}
         height={40}
       />

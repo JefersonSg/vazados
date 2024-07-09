@@ -1,0 +1,17 @@
+.ContentView {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 32px;
+}
+
+.nome {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}

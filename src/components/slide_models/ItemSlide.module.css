@@ -1,0 +1,40 @@
+.perfil_model {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding-top: 2px;
+}
+
+.perfil_model img{
+    box-sizing: border-box;
+    border-radius: 9999px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.image_div {
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 9999p;
+}
+.image_div::after {
+    content: '';
+    display: block;
+    width: calc(100%);
+    height: calc(100%);
+    position: absolute;
+    background: linear-gradient(#D300C5 0%, #D602AD 13%, #FF0A61 48%, #FFA910 77%, #FFC700 100% ) ;
+    top: 0px;
+    left: 0px;
+    rotate: 45deg;
+    border-radius: 9999px;
+}
+
+.perfil_model p {
+    color: white;
+    text-align: center;
+}

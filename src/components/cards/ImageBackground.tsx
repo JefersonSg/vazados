@@ -25,8 +25,9 @@ const ImageBackground = ({
         className={styles.frente}
         alt="imagem de frente"
         width={160}
-        height={207}
+        height={200}
         src={imgFrente}
+        sizes="100vw"
       />
     </div>
   );

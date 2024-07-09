@@ -1,5 +1,36 @@
 .main {
     background-color: #171717;
     min-height: 100vh;
-    padding-top: 24px;
+    padding: 64px 0;
+}
+
+.quer_mais {
+    padding-top: 32px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.quer_mais p {
+    color: #F6E11F;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.quer_mais img {
+    position: absolute;
+    animation: vaievem .3s infinite alternate linear;
+}
+
+
+@keyframes vaievem {
+    from {
+        top: 60px;
+    }
+    to {
+        top: 70px;
+    }
 }

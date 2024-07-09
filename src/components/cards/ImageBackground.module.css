@@ -1,17 +1,23 @@
 .image_background {
     position: relative;
-    width: max-content;
-    border: 1px solid white;
+    width: 100%;
+    height: 100%;
 }
 
 .fundo {
     position: absolute;
-    bottom: 0;
     z-index: -1;
+    width: 100%;
+    height: auto;
+    bottom: 0;
 }
 
 .frente {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0px;
     z-index: 100;
 }
 .brilho {
@@ -22,13 +28,29 @@
     position: absolute;
     width: 100%;
     height: 50%;
-    background-color: white;
+    background: linear-gradient(#171717 60%,#FFFFFF 70%);
     z-index: 2;
     filter: blur(50px);
 }
 
+.image_background::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    bottom: 0;
+    z-index: 100;
+}
 .image_background:hover .fundo {
     transition: all .3s;
     filter: sepia(100%);
     filter: blur(5px);
+}
+
+
+.image_background:hover .frente {
+    transition: all .5s ease-in;
+    scale: 1.1;
 }
