@@ -43,14 +43,14 @@
     bottom: 0;
     z-index: 100;
 }
-.image_background:hover .fundo {
+.image_background.ativo .fundo {
     transition: all .3s;
     filter: sepia(100%);
     filter: blur(5px);
 }
 
 
-.image_background:hover .frente {
-    transition: all .5s ease-in;
+.image_background.ativo .frente {
+    transition: all 1s ease-in;
     scale: 1.1;
 }

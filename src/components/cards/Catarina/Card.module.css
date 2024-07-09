@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: aparecer .5s ease-in forwards ;
 }
 
 .foto_modelo {
@@ -27,3 +28,11 @@
     /* box-shadow: 0 0 9px 0 #D49C61; */
 }
 
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

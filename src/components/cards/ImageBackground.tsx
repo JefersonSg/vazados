@@ -11,8 +11,38 @@ const ImageBackground = ({
   imgFrente: string;
   imgFundo: string;
 }) => {
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  const targetRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          console.log(isVisible);
+        }
+      },
+      { threshold: 0.5 } // Define o threshold para 50%
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef?.current);
+      }
+    };
+  }, [isVisible]);
+
   return (
-    <div className={styles.image_background}>
+    <div
+      className={`${styles.image_background} ${isVisible ? styles.ativo : ''}`}
+      ref={targetRef}
+    >
       <span className={styles.brilho}></span>
       <Image
         className={styles.fundo}

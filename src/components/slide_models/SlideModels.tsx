@@ -11,7 +11,12 @@ import ContentView from './ContentView';
 const SlideModels = () => {
   return (
     <>
-      <Swiper className={styles.swiper_models} slidesPerView={3.3} width={320}>
+      <Swiper
+        className={styles.swiper_models}
+        slidesPerView={3.5}
+        width={320}
+        spaceBetween={16}
+      >
         <SwiperSlide>
           <ItemSlide
             nome="Martina Oliveira"
