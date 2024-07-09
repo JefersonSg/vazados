@@ -20,9 +20,10 @@ const Payment = () => {
         exclusivos no grupo vip
       </h2>
       <span className={`${styles.time_count} ${FontSecond.className}`}>
-        {Math.floor(time / 60)}:{time % 60}
+        {Math.floor(time / 60)}:
+        {(time % 60).toString().length > 1 ? time % 60 : `0${time % 60}`}
       </span>
-      <p>Oferta relampago</p>
+      <p className={styles.oferta}>Oferta relampago</p>
       <div className={styles.price}>
         <p>
           de R$ <span>89,90</span>
@@ -31,7 +32,7 @@ const Payment = () => {
           por R$ <span>29,90</span>
         </p>
       </div>
-      <button>EU QUERO</button>
+      <button className={styles.btn_buy}>EU QUERO</button>
     </section>
   );
 };

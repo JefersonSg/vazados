@@ -24,13 +24,14 @@
 
 .price p{
     color: white;
+    text-align: center;
 }
 
 .price p:first-child {
     font-size: 13px;
 }
 .price p:first-child span{
-    font-size: 34px;
+    font-size: 50px;
     font-weight: 700;
     text-decoration: line-through;
     color: #FE3707;
@@ -38,4 +39,38 @@
 
 .price p:last-child {
     font-size: 16px;
+    margin-top: -24px;
+}
+.price p:last-child span{
+    font-size: 70px;
+    font-weight: 700;
+    color: #64f61f;
+}
+
+.oferta {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f6e11f;
+    padding-bottom: 12p;
+}
+
+.btn_buy {
+    width: 204px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    background: linear-gradient(to right, #EECF28, #EF9C20);
+    box-shadow: 0 0 17px 0 #EF9C20;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 24px;
+}
+.btn_buy:hover {
+    opacity: 0.9;
 }
