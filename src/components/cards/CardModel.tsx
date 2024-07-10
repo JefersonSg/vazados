@@ -9,7 +9,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import './slide.css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import ImageBackground from './ImageBackground';
 const CardModel = () => {
   return (
     <div className={styles.card_container}>
@@ -24,21 +23,14 @@ const CardModel = () => {
         lazyPreloadPrevNext={1}
       >
         <SwiperSlide>
-          <ImageBackground
-            imgFundo="/modelos/catarina/capa/fundo.png"
-            imgFrente="/modelos/catarina/capa/frente.png"
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
           <VideoPlayer
-            src="/modelos/catarina/catarina_video.mp4"
             autoplay={true}
-            controls={true}
-            height={200}
-            width={160}
+            controls={false}
+            height={384}
+            width={300}
             loop={false}
             muted={false}
+            src="/modelos/video.mp4"
           />
         </SwiperSlide>
       </Swiper>
