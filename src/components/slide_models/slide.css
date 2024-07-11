@@ -1,0 +1,53 @@
+
+/* Buttons prev-next */
+
+.swiperModels .swiper-button-next,
+.swiperModels .swiper-button-prev {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: white;
+  opacity: 1;
+  margin-top: calc(-10px - (var(--swiper-navigation-size) / 2));
+  color: #FE3707;
+  --swiper-navigation-size: 22px;
+  --swiper-navigation-top-offset: 55%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: #FE3707 !important;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Padrão */
+}
+
+.swiperModels .swiper-button-next {
+  right: 4px;
+}
+.swiperModels .swiper-button-prev {
+  left: 4px;
+}
+
+.swiperModels .swiper-button-next::after,
+.swiperModels .swiper-button-prev::after {
+    font-size: 0px;
+    background: url('../../../public/seta_vermelha.svg') no-repeat center center ;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-size: 20%;
+}
+.swiperModels .swiper-button-prev::after {
+    rotate: 180deg;
+}
+.swiperModels .swiper-button-next:hover,
+.swiperModels .swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.swiperModels .swiper-button-next.swiper-button-disabled,
+.swiperModels .swiper-button-prev.swiper-button-disabled {
+  pointer-events: visible !important;
+  opacity: 0.35;
+  display: none;
+}

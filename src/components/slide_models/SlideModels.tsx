@@ -6,48 +6,53 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './SlideModels.module.css';
 
 import 'swiper/css';
+import 'swiper/css/navigation';
+import './slide.css';
 import ContentView from './ContentView';
+import { Navigation } from 'swiper/modules';
 
 const SlideModels = () => {
   return (
     <>
-      <Swiper
-        className={styles.swiper_models}
-        slidesPerView={3.5}
-        width={320}
-        spaceBetween={16}
-      >
-        <SwiperSlide>
-          <ItemSlide
-            nome="Martina Oliveira"
-            image="/modelos/slide/martina.png"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemSlide
-            nome="Martina Oliveira"
-            image="/modelos/slide/martina.png"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemSlide
-            nome="Martina Oliveira"
-            image="/modelos/slide/martina.png"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemSlide
-            nome="Martina Oliveira"
-            image="/modelos/slide/martina.png"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemSlide
-            nome="Martina Oliveira"
-            image="/modelos/slide/martina.png"
-          />
-        </SwiperSlide>
-      </Swiper>
+      <div className={styles.container_slide}>
+        <Swiper
+          className={`swiperModels ${styles.swiper_models}`}
+          slidesPerView={2.6}
+          navigation={true}
+          modules={[Navigation]}
+        >
+          <SwiperSlide>
+            <ItemSlide
+              nome="Martina Oliveira"
+              image="/modelos/slide/martina.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ItemSlide
+              nome="Martina Oliveira"
+              image="/modelos/slide/martina.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ItemSlide
+              nome="Martina Oliveira"
+              image="/modelos/slide/martina.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ItemSlide
+              nome="Martina Oliveira"
+              image="/modelos/slide/martina.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ItemSlide
+              nome="Martina Oliveira"
+              image="/modelos/slide/martina.png"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
 
       <ContentView name="Cibelly Ferreira" />
     </>

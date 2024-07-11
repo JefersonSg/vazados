@@ -3,10 +3,17 @@
     flex-direction: column;
     align-items: center;
     animation: aparecer .5s ease-in forwards ;
+    min-height: 500px;
+    width: 270px;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 32px;
 }
-
-.foto_modelo {
-    margin-top: 8px;
+.VideoPlayer {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
 }
 .nome,
 .texto {
