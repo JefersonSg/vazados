@@ -18,18 +18,19 @@ const SlideModels = () => {
         <Swiper
           className={`swiperModels ${styles.swiper_models}`}
           slidesPerView={2.6}
+          spaceBetween={16}
           navigation={true}
           modules={[Navigation]}
         >
           <SwiperSlide>
             <ItemSlide
-              nome="Martina Oliveira"
+              nome="Juliana Bonde"
               image="/modelos/slide/martina.png"
             />
           </SwiperSlide>
           <SwiperSlide>
             <ItemSlide
-              nome="Martina Oliveira"
+              nome="Catarina Paolino"
               image="/modelos/slide/martina.png"
             />
           </SwiperSlide>

@@ -1,11 +1,11 @@
 .main {
     background-color: #2A2A2A;
     min-height: 100vh;
-    padding: 64px 0;
+    padding: 32px 0 64px 0;
 }
 
 .quer_mais {
-    padding-top: 32px;
+    padding-top: 16px;
     gap: 8px;
     display: flex;
     align-items: center;
