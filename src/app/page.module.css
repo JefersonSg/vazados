@@ -1,9 +1,13 @@
 .main {
-    background-color: #2A2A2A;
+    background-color: #000000;
     min-height: 100vh;
-    padding: 32px 0 64px 0;
+    padding: 0 0 64px 0;
 }
-
+.section_1 {
+    padding-top: 16px;
+    padding-bottom: 24px;
+    background: linear-gradient(#11101E 40%, #07005F 100%);
+}
 .quer_mais {
     padding-top: 16px;
     gap: 8px;

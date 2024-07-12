@@ -38,3 +38,26 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+
+.btn_buy {
+  width: 204px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 70px;
+  background: linear-gradient(to right, #EECF28, #EF9C20);
+  box-shadow: 0 0 17px 0 #EF9C20;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+.btn_buy:hover {
+  opacity: 0.9;
+}

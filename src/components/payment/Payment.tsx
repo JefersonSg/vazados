@@ -32,7 +32,7 @@ const Payment = () => {
           por R$ <span>29,90</span>
         </p>
       </div>
-      <button className={styles.btn_buy}>EU QUERO</button>
+      <button className={'btn_buy'}>EU QUERO</button>
     </section>
   );
 };

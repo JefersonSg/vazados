@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .logo {
     border-radius: 6px;
@@ -10,12 +11,12 @@
     border: 1px solid white;
     background-color: white;
     padding: 0 14px;
-    box-shadow: 0 0 18px 5px #FFFFFF;
+    box-shadow: 0 0 18px 1px #FFFFFF;
 }
 
 .do {
 position: absolute;
-top: 55px;
+top: 25px;
 }
 .header h1 {
     color: #F6E11F;

@@ -17,10 +17,24 @@ const SlideModels = () => {
       <div className={styles.container_slide}>
         <Swiper
           className={`swiperModels ${styles.swiper_models}`}
-          slidesPerView={2.6}
+          slidesPerView={'auto'}
           spaceBetween={16}
           navigation={true}
           modules={[Navigation]}
+          breakpoints={{
+            0: {
+              slidesPerView: 2.5
+            },
+            480: {
+              slidesPerView: 3.5
+            },
+            760: {
+              slidesPerView: 4.5
+            },
+            860: {
+              slidesPerView: 5.5
+            }
+          }}
         >
           <SwiperSlide>
             <ItemSlide

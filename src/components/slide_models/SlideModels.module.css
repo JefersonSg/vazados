@@ -1,9 +1,9 @@
 .container_slide {
-    background-color: #222222;
+    background-color: #000000;
     padding: 12px;
-    margin-top: 52px;
 }
 
 .swiper_models {
     margin: 0 auto;
+    max-width: 880px;
 }
