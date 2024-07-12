@@ -1,0 +1,50 @@
+.reprodutor_video {
+    top: 0;
+    left: 50%;
+    transform: translate(-50% ,0);
+    position: fixed;
+    width: 100%;
+    max-height: calc(100vh - 10px);
+    max-width: 500px;
+    height: calc(100vh - 10px);
+    z-index: 1000;
+    border-radius: 0 0 12px 12px;
+}
+.profile {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    gap: 8px;
+    font-weight: 500;
+    background: linear-gradient( #000000 0%, #00000020 90%, #00000000 100%);
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 16px;
+}
+.profile p {
+    color: white;
+}
+
+
+.fechar {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    z-index: 10000;
+    cursor: pointer;
+}
+.backgground {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}

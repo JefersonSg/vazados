@@ -5,6 +5,8 @@
     justify-content: center;
     gap: 4px;
     padding-top: 2px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
 }
 
 .perfil_model img{
@@ -19,6 +21,27 @@
     z-index: 1000;
     padding: 3px;
 }
+
+.perfil_model::before,
+.perfil_model::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background: inherit;
+    z-index: -1;
+}
+.perfil_model::before {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.perfil_model::after {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
 .borda {
     display: block;
     position: absolute;
@@ -49,7 +72,62 @@
     z-index: -1;
 }
 
-.perfil_model p {
+
+.nome {
+    z-index: 10000;
     color: white;
     text-align: center;
 }
+.circle1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 120px;
+    background: black;
+    transition: all .4s;
+    transform: translate(-50%, 0);
+    rotate: 45deg;
+    animation: spin 2s linear infinite;
+}
+.circle2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 120px;
+    background: black;
+    transition: all .4s;
+    transform: translate(-50%, 0);
+    rotate: 75deg;
+    animation: spin 2s linear infinite;
+}
+.circle3 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 120px;
+    background: black;
+    transition: all .4s;
+    transform: translate(-50%, 0);
+    rotate: 35deg;
+    animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        width: 10px;
+    }
+    100% {
+        transform: rotate(360deg);
+        width: 100px;
+    }
+}
+
+
