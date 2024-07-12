@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { FontFirst } from '@/fonts/font';
+import { FontFirst, FontTerciary } from '@/fonts/font';
 
 export const metadata: Metadata = {
   title: 'Vazados do onlyfans',
@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={FontFirst.className}>{children}</body>
+      <body className={`${FontFirst.className} ${FontTerciary.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

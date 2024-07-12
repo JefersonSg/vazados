@@ -7,12 +7,31 @@ const ContentView = ({ name }: { name: string }) => {
     <div className={styles.ContentView}>
       <p className={styles.nome}>{name}</p>
       <div className={styles.midias}>
-        <Image
-          alt="imagem da modelo"
-          src={'/modelos/cibelly/cibelly.png'}
-          width={270}
-          height={188}
-        />
+        <div className={styles.image_model}>
+          <Image
+            alt="imagem da modelo"
+            src={'/modelos/cibelly/cibelly.png'}
+            width={110}
+            height={160}
+          />
+        </div>
+        <div className={styles.image_model}>
+          <Image
+            alt="imagem da modelo"
+            src={'/modelos/cibelly/cibelly.png'}
+            width={110}
+            height={160}
+          />
+        </div>
+
+        <div className={styles.image_model}>
+          <Image
+            alt="imagem da modelo"
+            src={'/modelos/cibelly/cibelly.png'}
+            width={110}
+            height={160}
+          />
+        </div>
       </div>
     </div>
   );

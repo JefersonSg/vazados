@@ -57,7 +57,17 @@ img {
   font-size: 24px;
   font-weight: 700;
   margin-top: 24px;
+  animation: vaievem .8s infinite alternate ease-in-out ;
 }
 .btn_buy:hover {
   opacity: 0.9;
+}
+
+@keyframes vaievem {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.0);
+  }
 }

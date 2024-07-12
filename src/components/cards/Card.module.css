@@ -38,7 +38,9 @@
     text-align: center;
     margin-top: 16px;
 }
-
+.texto {
+    line-height: 22px;
+}
 .nome {
     color: white;
     padding-bottom: 8px;
@@ -64,7 +66,6 @@
     top: 120px;
     left: 50%;
     transform: translate(-50%,0);
-    
     display: flex;
     flex-direction: column;
     align-items: center;

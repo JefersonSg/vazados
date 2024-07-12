@@ -5,12 +5,44 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    width: 100%;
+    width: calc(100% - 32px);
+    margin: 0 auto;
     padding-bottom: 32px;
     background-color: #505050;
     margin-top: 12px;
+    box-sizing: border-box;
+    max-width: 500px;
+
+}
+.midias {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 12px;
+    box-sizing: border-box;
+    gap: 16px;
 }
 
+.midias img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid white;
+}
+.image_model {
+    position: relative;
+    cursor: pointer;
+}
+.image_model::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    background: url('../../../public/play.svg') no-repeat center center;
+    transform: translate(-50%, -50%);
+}
 .nome {
     color: white;
     font-weight: 700;

@@ -1,4 +1,4 @@
-import { DM_Sans, DM_Mono } from 'next/font/google';
+import { DM_Sans, DM_Mono, Inter } from 'next/font/google';
 
 export const FontFirst = DM_Sans({
   weight: ['300', '400', '500', '600', '700'],
@@ -12,4 +12,11 @@ export const FontSecond = DM_Mono({
   subsets: ['latin'],
   display: 'auto',
   variable: '--font-second'
+});
+
+export const FontTerciary = Inter({
+  weight: ['900'],
+  subsets: ['latin'],
+  display: 'auto',
+  variable: '--font-terciary'
 });
