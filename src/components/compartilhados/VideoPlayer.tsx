@@ -6,7 +6,6 @@ const VideoPlayer = ({
   width,
   height,
   controls,
-  autoplay,
   loop,
   muted
 }: {
@@ -14,12 +13,22 @@ const VideoPlayer = ({
   width: number;
   height: number;
   controls: boolean;
-  autoplay: boolean;
   loop: boolean;
   muted: boolean;
 }) => {
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load();
+      void videoRef.current.play();
+    }
+  }, [src]);
+
+  React.useEffect(() => {});
   return (
     <video
+      ref={videoRef}
       className={styles.VideoPlayer}
       width={width}
       height={height}

@@ -3,23 +3,29 @@ import React from 'react';
 import styles from './ContentView.module.css';
 import VideoPreview from './VideoPreview';
 import PopUpPayment from '../payment/PopUpPayment';
+import { type Models } from './SlideModels';
 
 const ContentView = ({
   name,
-  story,
-  setStory,
   imageProfile,
   images,
-  video
+  video,
+  setIndexActive,
+  setVideo,
+  models,
+  indexActive
 }: {
   name: string;
-  story: string;
-  setStory: React.Dispatch<React.SetStateAction<string>>;
   imageProfile: string;
   images: string[];
   video: string;
+  setIndexActive: React.Dispatch<React.SetStateAction<number>>;
+  setVideo: React.Dispatch<React.SetStateAction<string>>;
+  models: Models[];
+  indexActive: number;
 }) => {
   const [ativoPopUp, setAtivoPopUp] = React.useState(false);
+  const [ativoVideo, setAtivoVideo] = React.useState('');
   return (
     <>
       <div className={styles.ContentView}>
@@ -32,7 +38,8 @@ const ContentView = ({
                 key={image}
                 onClick={() => {
                   if (index === 0) {
-                    setStory(video);
+                    setVideo(video);
+                    setAtivoVideo('a');
                   } else {
                     setAtivoPopUp(true);
                   }
@@ -49,11 +56,12 @@ const ContentView = ({
           })}
         </div>
       </div>
-      {story && (
+      {video && ativoVideo && (
         <VideoPreview
-          videoPlay={story}
+          videoPlay={video}
+          time={Math.floor(Math.random() * Math.random() * 10)}
           name={name}
-          setVideoPlay={setStory}
+          setVideoPlay={setAtivoVideo}
           imageProfile={imageProfile}
         />
       )}
@@ -76,6 +84,20 @@ const ContentView = ({
             X
           </span>
         </>
+      )}
+      {ativoVideo && (
+        <span
+          className={styles.proximo}
+          onClick={() => {
+            if (models.length > indexActive) {
+              setIndexActive((indexActive) => indexActive + 1);
+            } else {
+              setAtivoVideo('');
+            }
+          }}
+        >
+          {`>`}
+        </span>
       )}
     </>
   );

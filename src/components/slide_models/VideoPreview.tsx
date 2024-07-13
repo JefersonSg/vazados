@@ -8,12 +8,14 @@ const VideoPreview = ({
   name,
   videoPlay,
   setVideoPlay,
-  imageProfile
+  imageProfile,
+  time
 }: {
   name: string;
   videoPlay: string;
   setVideoPlay: React.Dispatch<React.SetStateAction<string>>;
   imageProfile: string;
+  time: number;
 }) => {
   return (
     <>
@@ -26,14 +28,14 @@ const VideoPreview = ({
             height={48}
           />
           <p className={styles.nome}>{name}</p>
+          <span className={styles.horas}>{time > 0 ? time : 1} h</span>
         </div>
         <VideoPlayer
-          autoplay={true}
           controls={false}
           height={100}
           width={100}
           loop={false}
-          muted={true}
+          muted={false}
           src={videoPlay}
         />
       </div>

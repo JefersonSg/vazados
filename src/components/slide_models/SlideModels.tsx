@@ -11,7 +11,7 @@ import './slide.css';
 import ContentView from './ContentView';
 import { Navigation } from 'swiper/modules';
 
-interface Models {
+export interface Models {
   nome: string;
   image: string;
   video: string;
@@ -19,7 +19,7 @@ interface Models {
 }
 
 const SlideModels = () => {
-  const models: Models[] = [
+  const [models] = React.useState<Models[]>([
     {
       nome: 'Juliana Bonde',
       image: '/modelos/slide/juliana.png',
@@ -70,18 +70,20 @@ const SlideModels = () => {
         '/modelos/cibelly/images/image3.png'
       ]
     }
-  ];
+  ]);
 
   const [ativo, setAtivo] = React.useState('');
   const [name, setName] = React.useState(models?.[0]?.nome ?? '');
   const [imageProfile, setImageProfile] = React.useState(
     models?.[0]?.image ?? ''
   );
-  const [story, setStory] = React.useState('');
   const [images, setImages] = React.useState<string[]>(
     models?.[0]?.images ?? ['']
   );
-  const [video, setVideo] = React.useState<string>('');
+  const [indexActive, setIndexActive] = React.useState<number>(0);
+  const [video, setVideo] = React.useState<string>(
+    'https://vazados.s3.sa-east-1.amazonaws.com/juliana.mp4'
+  );
 
   React.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -92,6 +94,17 @@ const SlideModels = () => {
       clearTimeout(timeout);
     };
   }, [ativo]);
+
+  React.useEffect(() => {
+    if (indexActive > 0 && models.length > indexActive) {
+      setName(models[indexActive].nome);
+      setImageProfile(models[indexActive].image);
+      setImages(models[indexActive].images);
+      setVideo(models[indexActive].video);
+
+      console.log(models[indexActive].video);
+    }
+  }, [indexActive, models]);
 
   return (
     <>
@@ -117,7 +130,7 @@ const SlideModels = () => {
             }
           }}
         >
-          {models.map((model) => {
+          {models.map((model, index) => {
             return (
               <SwiperSlide key={model.nome}>
                 <div
@@ -127,6 +140,7 @@ const SlideModels = () => {
                     setImageProfile(model.image);
                     setImages(model.images);
                     setVideo(model.video);
+                    setIndexActive(index);
                   }}
                 >
                   <ItemSlide
@@ -143,9 +157,11 @@ const SlideModels = () => {
       </div>
 
       <ContentView
+        indexActive={indexActive}
+        models={models}
+        setVideo={setVideo}
+        setIndexActive={setIndexActive}
         name={name}
-        story={story}
-        setStory={setStory}
         imageProfile={imageProfile}
         images={images}
         video={video}
