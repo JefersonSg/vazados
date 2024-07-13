@@ -15,6 +15,7 @@ interface Models {
   nome: string;
   image: string;
   video: string;
+  images: string[];
 }
 
 const SlideModels = () => {
@@ -22,34 +23,65 @@ const SlideModels = () => {
     {
       nome: 'Juliana Bonde',
       image: '/modelos/slide/juliana.png',
-      video: 'https://vazados.s3.sa-east-1.amazonaws.com/juliana.mp4'
+      video: 'https://vazados.s3.sa-east-1.amazonaws.com/juliana.mp4',
+      images: [
+        '/modelos/juliana/images/image1.png',
+        '/modelos/juliana/images/image2.png',
+        '/modelos/juliana/images/image3.png'
+      ]
     },
     {
       nome: 'Cararina Paolino',
       image: '/modelos/slide/catarina.png',
-      video: 'https://vazados.s3.sa-east-1.amazonaws.com/catarina.mp4'
+      video: 'https://vazados.s3.sa-east-1.amazonaws.com/catarina.mp4',
+      images: [
+        '/modelos/catarina/images/image1.png',
+        '/modelos/catarina/images/image2.png',
+        '/modelos/catarina/images/image3.png'
+      ]
     },
     {
       nome: 'Martina Oliveira',
       image: '/modelos/slide/martina.png',
-      video: 'https://vazados.s3.sa-east-1.amazonaws.com/martina.mp4'
+      video: 'https://vazados.s3.sa-east-1.amazonaws.com/martina.mp4',
+      images: [
+        '/modelos/martina/images/image1.png',
+        '/modelos/martina/images/image2.png',
+        '/modelos/martina/images/image3.png'
+      ]
     },
     {
       nome: 'Mel Maia',
       image: '/modelos/slide/melmaia.png',
-      video: 'https://vazados.s3.sa-east-1.amazonaws.com/melmaia.mp4'
+      video: 'https://vazados.s3.sa-east-1.amazonaws.com/melmaia.mp4',
+      images: [
+        '/modelos/mel maia/images/image1.png',
+        '/modelos/mel maia/images/image2.png',
+        '/modelos/mel maia/images/image3.png'
+      ]
     },
     {
       nome: 'Cibelly Ferreira',
       image: '/modelos/slide/cibelly.png',
-      video: 'https://vazados.s3.sa-east-1.amazonaws.com/cibelly.mp4'
+      video: 'https://vazados.s3.sa-east-1.amazonaws.com/cibelly.mp4',
+      images: [
+        '/modelos/cibelly/images/image1.png',
+        '/modelos/cibelly/images/image2.png',
+        '/modelos/cibelly/images/image3.png'
+      ]
     }
   ];
 
   const [ativo, setAtivo] = React.useState('');
   const [name, setName] = React.useState(models?.[0]?.nome ?? '');
-  const [imageProfile, setImageProfile] = React.useState('');
+  const [imageProfile, setImageProfile] = React.useState(
+    models?.[0]?.image ?? ''
+  );
   const [story, setStory] = React.useState('');
+  const [images, setImages] = React.useState<string[]>(
+    models?.[0]?.images ?? ['']
+  );
+  const [video, setVideo] = React.useState<string>('');
 
   React.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -92,14 +124,16 @@ const SlideModels = () => {
                   onClick={() => {
                     setAtivo(model.nome);
                     setName(model.nome);
-                    setStory(model.video);
                     setImageProfile(model.image);
+                    setImages(model.images);
+                    setVideo(model.video);
                   }}
                 >
                   <ItemSlide
                     ativo={ativo}
                     nome={model.nome}
                     image={model.image}
+                    nomeAtivo={name}
                   />
                 </div>
               </SwiperSlide>
@@ -113,6 +147,8 @@ const SlideModels = () => {
         story={story}
         setStory={setStory}
         imageProfile={imageProfile}
+        images={images}
+        video={video}
       />
     </>
   );

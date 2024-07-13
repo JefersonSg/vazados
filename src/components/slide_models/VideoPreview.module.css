@@ -37,7 +37,7 @@
     z-index: 10000;
     cursor: pointer;
 }
-.backgground {
+.background {
     content: '';
     display: block;
     position: fixed;

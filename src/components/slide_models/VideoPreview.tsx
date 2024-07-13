@@ -45,7 +45,7 @@ const VideoPreview = ({
       >
         X
       </span>
-      <div className={styles.backgground}></div>
+      <div className={styles.background}></div>
     </>
   );
 };

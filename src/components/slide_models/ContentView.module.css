@@ -32,7 +32,20 @@
     position: relative;
     cursor: pointer;
 }
+
 .image_model::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    background: url('../../../public/lock.svg') no-repeat center center;
+    transform: translate(-50%, -50%);
+}
+
+.image_model.liberado::after {
     content: '';
     display: block;
     position: absolute;
@@ -43,9 +56,40 @@
     background: url('../../../public/play.svg') no-repeat center center;
     transform: translate(-50%, -50%);
 }
+.image_model::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    background: url('../../../public/lock.svg') no-repeat center center;
+    transform: translate(-50%, -50%);
+}
 .nome {
     color: white;
     font-weight: 700;
     font-size: 18px;
 }
-
+.fechar {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    z-index: 10000;
+    cursor: pointer;
+}
+.background {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+}

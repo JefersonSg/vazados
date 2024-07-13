@@ -1,0 +1,22 @@
+.pop_up_payment {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    z-index: 1000;
+    transition: all .5s;
+}
+
+.pop_up_payment.ativo {
+    animation: open .6s ease-in forwards;
+}
+
+@keyframes open {
+    from {
+        bottom: -100%;
+    }
+    to {
+        bottom: 0;
+    }
+}

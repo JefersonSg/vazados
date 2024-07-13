@@ -7,8 +7,12 @@
     padding-top: 2px;
     position: relative;
     transition: transform 0.5s ease-in-out;
+    padding-bottom: 8px;
 }
 
+.perfil_model.ativo {
+    padding-bottom: 0px;
+}
 .perfil_model img{
     width: 100%;
     height: 100%;
@@ -20,26 +24,6 @@
     position: relative;
     z-index: 1000;
     padding: 3px;
-}
-
-.perfil_model::before,
-.perfil_model::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 50%;
-    background: inherit;
-    z-index: -1;
-}
-.perfil_model::before {
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-}
-
-.perfil_model::after {
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
 .borda {
@@ -72,6 +56,9 @@
     z-index: -1;
 }
 
+.perfil_model.ativo .image_div::after {
+    background: rgba(100, 100, 100, 0.6);
+}
 
 .nome {
     z-index: 10000;
@@ -80,42 +67,40 @@
 }
 .circle1 {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
+    transform: rotate(0deg), translate(-50%,0);
     width: 10px;
     height: 120px;
     background: black;
     transition: all .4s;
-    transform: translate(-50%, 0);
-    rotate: 45deg;
-    animation: spin 2s linear infinite;
+    animation: spin 2s linear ;
 }
 .circle2 {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     width: 10px;
+    transform: rotate(45deg), translate(-50%,0);
     height: 120px;
     background: black;
     transition: all .4s;
-    transform: translate(-50%, 0);
-    rotate: 75deg;
-    animation: spin 2s linear infinite;
+    animation: spin 2s linear ;
 }
 .circle3 {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     width: 10px;
     height: 120px;
     background: black;
     transition: all .4s;
-    transform: translate(-50%, 0);
-    rotate: 35deg;
-    animation: spin 2s linear infinite;
+    transform: rotate(77deg), translate(-50%,0);
+
+    animation: spin 2s linear ;
 }
 
 
