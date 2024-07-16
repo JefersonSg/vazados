@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './Payment.module.css';
 import { FontSecond } from '@/fonts/font';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Payment = () => {
   const [time, setTime] = React.useState(60 * 10);
@@ -51,7 +52,13 @@ const Payment = () => {
         {(time % 60).toString().length > 1 ? time % 60 : `0${time % 60}`}
       </span>
 
-      <button className={'btn_buy'}>EU QUERO</button>
+      <Link
+        href={'https://pay.kiwify.com.br/GvGn2Pd'}
+        target="_blank"
+        className={'btn_buy'}
+      >
+        EU QUERO
+      </Link>
     </section>
   );
 };

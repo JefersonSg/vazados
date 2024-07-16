@@ -7,6 +7,7 @@ import './slide.css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import VolumeLottie from '../lotties/VolumeLottie';
+import Link from 'next/link';
 const CardModel = () => {
   const [muted, setMuted] = React.useState(true);
   const [newPlay, setNewPlay] = React.useState(false);
@@ -112,7 +113,13 @@ const CardModel = () => {
       <p className={styles.texto}>
         Veja tudo que foi vazado🔞 <br /> das famosinhas de redes sociais🔥
       </p>
-      <button className={'btn_buy'}>EU QUERO</button>
+      <Link
+        href={'https://pay.kiwify.com.br/GvGn2Pd'}
+        target="_blank"
+        className={'btn_buy'}
+      >
+        EU QUERO
+      </Link>
     </div>
   );
 };
