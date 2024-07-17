@@ -114,7 +114,7 @@ const CardModel = () => {
         Veja tudo que foi vazado🔞 <br /> das famosinhas de redes sociais🔥
       </p>
       <Link
-        href={'https://pay.kiwify.com.br/GvGn2Pd'}
+        href={'https://botgram.club/hot-vazados-vip'}
         target="_blank"
         className={'btn_buy'}
       >

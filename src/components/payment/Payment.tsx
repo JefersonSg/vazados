@@ -53,7 +53,7 @@ const Payment = () => {
       </span>
 
       <Link
-        href={'https://pay.kiwify.com.br/GvGn2Pd'}
+        href={'https://botgram.club/hot-vazados-vip'}
         target="_blank"
         className={'btn_buy'}
       >
