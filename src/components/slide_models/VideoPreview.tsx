@@ -45,7 +45,7 @@ const VideoPreview = ({
           setVideoPlay('');
         }}
       >
-        X
+        <Image alt="fechar" src={'/fechar.svg'} width={20} height={20} />
       </span>
       <div className={styles.background}></div>
     </>
